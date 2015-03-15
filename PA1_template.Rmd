@@ -1,5 +1,7 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
+author: "Marek Mañko"
+date: "Sunday, March 15, 2015"
 output: 
   html_document:
     keep_md: true

@@ -1,4 +1,6 @@
 # Reproducible Research: Peer Assessment 1
+Marek Mańko  
+Sunday, March 15, 2015  
 
 ## Loading and preprocessing the data
 
