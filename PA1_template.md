@@ -61,7 +61,11 @@ median(Proc.Activity$steps)
 Proc.Activity <- aggregate(steps ~ interval, Imp.Activity, mean, na.rm=TRUE)
 g <- ggplot(Proc.Activity, aes(x=interval, y=steps)) + geom_line() + xlab("Time interval") + ylab("Mean Number of steps")
 print(g)
+
+# 5-min interval
+Proc.Activity.MaxInterval <- Proc.Activity$interval[which.max(Proc.Activity$avg_steps)]
 ```
+5-minute interval which contains the maximum number of steps is interval 835.
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
