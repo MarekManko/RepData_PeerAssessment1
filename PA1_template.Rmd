@@ -1,6 +1,6 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-author: "Marek Mañko"
+author: "Marek MaÃ±ko"
 date: "Sunday, March 15, 2015"
 output: 
   html_document:
@@ -38,7 +38,10 @@ Proc.Activity <- aggregate(steps ~ interval, Imp.Activity, mean, na.rm=TRUE)
 g <- ggplot(Proc.Activity, aes(x=interval, y=steps)) + geom_line() + xlab("Time interval") + ylab("Mean Number of steps")
 print(g)
 
+# 5-min interval
+Proc.Activity.MaxInterval <- Proc.Activity$interval[which.max(Proc.Activity$avg_steps)]
 ```
+5-minute interval which contains the maximum number of steps is interval 835.
 
 ## Imputing missing values
 1. Calculate and report the total number of missing values in the dataset.
@@ -69,7 +72,7 @@ median(Proc.Activity.New$steps, na.rm=TRUE)
 ```
 
 ## Are there differences in activity patterns between weekdays and weekends?
-1. Create a new factor variable in the dataset with two levels – “weekday” and “weekend”
+1. Create a new factor variable in the dataset with two levels â€“ â€œweekdayâ€ and â€œweekendâ€
 2. Make a panel plot containing a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 ```{r echo=TRUE}
 require(plyr)
