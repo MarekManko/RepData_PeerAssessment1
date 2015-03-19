@@ -63,7 +63,7 @@ g <- ggplot(Proc.Activity, aes(x=interval, y=steps)) + geom_line() + xlab("Time 
 print(g)
 
 # 5-min interval
-Proc.Activity.MaxInterval <- Proc.Activity$interval[which.max(Proc.Activity$avg_steps)]
+Proc.Activity.MaxInterval <- Proc.Activity$interval[which.max(Proc.Activity$steps)]
 ```
 5-minute interval which contains the maximum number of steps is interval 835.
 
